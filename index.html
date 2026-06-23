@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#E87328" />
+  <title>橘時｜資金總覽</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <button class="icon-button menu-button" id="menuButton" aria-label="開啟選單" aria-expanded="false" aria-controls="sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <a class="brand" href="#overview" aria-label="橘時資金總覽首頁">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-top"></span>
+            <span class="brand-mark-bottom"></span>
+          </span>
+          <span class="brand-text">
+            <b>ORANGE TIME</b>
+            <small>資金管理中心</small>
+          </span>
+        </a>
+      </div>
+
+      <div class="topbar-tools">
+        <div class="demo-badge">內部測試環境</div>
+        <button class="amount-toggle" id="amountToggle" type="button" aria-pressed="false">
+          <span class="eye-icon" aria-hidden="true">◉</span>
+          <span>隱藏金額</span>
+        </button>
+        <button class="user-chip" type="button" aria-label="使用者選單">
+          <span class="avatar">B</span>
+          <span class="user-name">Bonnie</span>
+          <span class="chevron">⌄</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="primary-nav" aria-label="主要導覽">
+      <a class="active" href="#overview">資金總覽</a>
+      <a href="#transactions">收支紀錄</a>
+      <a href="#payables">應付款項</a>
+      <a href="#suppliers">供應商</a>
+      <a href="#reports">營運報表</a>
+      <a href="#settings">設定</a>
+    </nav>
+
+    <aside class="sidebar" id="sidebar" aria-label="資金功能選單">
+      <div class="sidebar-company">
+        <span class="mini-logo">OT</span>
+        <div>
+          <b>良呈橘時有限公司</b>
+          <small>營運資金帳戶</small>
+        </div>
+      </div>
+
+      <p class="sidebar-label">資金中心</p>
+      <nav class="side-nav">
+        <a class="active" href="#overview"><span class="side-icon">▦</span>資金總覽</a>
+        <a href="#accounts"><span class="side-icon">▤</span>帳戶與餘額</a>
+        <a href="#transactions"><span class="side-icon">↔</span>收支明細</a>
+        <a href="#forecast"><span class="side-icon">⌁</span>現金流預估</a>
+      </nav>
+
+      <p class="sidebar-label">營運管理</p>
+      <nav class="side-nav">
+        <a href="#payables"><span class="side-icon">✓</span>應付款管理</a>
+        <a href="#receivables"><span class="side-icon">＋</span>應收款管理</a>
+        <a href="#stores"><span class="side-icon">⌂</span>門市資金狀況</a>
+        <a href="#files"><span class="side-icon">▱</span>檔案中心</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="note-icon">i</span>
+        <p>此頁為公司內部資金管理介面示範，不連接任何銀行或支付系統。</p>
+      </div>
+    </aside>
+
+    <main id="main-content" class="main-content">
+      <div class="page-head">
+        <div>
+          <p class="breadcrumb">資金中心 <span>/</span> 資金總覽</p>
+          <div class="title-row">
+            <h1>資金即時概覽</h1>
+            <span class="status-dot"><i></i>資料已更新</span>
+          </div>
+          <p class="subtitle">集中查看公司的可用資金、應付款與近期收支狀態。</p>
+        </div>
+        <div class="page-actions">
+          <p class="updated-time">最後更新：<time id="updatedTime">2026/06/23 20:53</time></p>
+          <div class="action-buttons">
+            <button class="secondary-button" id="exportButton" type="button">匯出摘要</button>
+            <button class="primary-button" id="refreshButton" type="button"><span>↻</span>重新整理</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="notice" aria-label="資料使用提醒">
+        <span class="notice-icon">!</span>
+        <div>
+          <b>內部營運資料</b>
+          <p>本頁僅供良呈橘時有限公司內部管理使用，顯示資料為手動匯入或測試數據，並非任何金融機構網頁。</p>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="資金重點數字">
+        <article class="metric-card main-metric">
+          <div class="metric-label"><span class="metric-icon orange">◒</span>可用營運資金</div>
+          <strong class="masked-amount" data-amount="22,257,251.00">NT$ 22,257,251.00</strong>
+          <div class="metric-foot"><span class="positive">▲ 2.8%</span><span>較上週同期</span></div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-label"><span class="metric-icon blue">↙</span>本月已入帳</div>
+          <strong class="masked-amount" data-amount="3,185,420.00">NT$ 3,185,420.00</strong>
+          <div class="metric-foot"><span>含門市與線上通路</span></div>
+        </article>
+        <article class="metric-card">
+          <div class="metric-label"><span class="metric-icon rose">↗</span>七日內應付款</div>
+          <strong class="masked-amount" data-amount="486,250.00">NT$ 486,250.00</strong>
+          <div class="metric-foot"><span class="warning">需優先確認 3 筆</span></div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel balance-panel" id="accounts">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">主要資金帳戶</p>
+              <h2>營運帳戶資金狀態</h2>
+            </div>
+            <button class="text-button" type="button">查看全部帳戶 <span>→</span></button>
+          </div>
+
+          <div class="account-summary">
+            <div class="account-left">
+              <span class="account-logo">OT</span>
+              <div>
+                <h3>總營運資金帳戶</h3>
+                <p>帳戶代碼：OTC-FUND-001 <span class="tag">主要</span></p>
+              </div>
+            </div>
+            <span class="account-state"><i></i>正常</span>
+          </div>
+
+          <div class="balance-table-wrap">
+            <table class="balance-table">
+              <thead>
+                <tr>
+                  <th>資金類別</th>
+                  <th>帳面金額</th>
+                  <th>可用金額</th>
+                  <th>保留金額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="table-label"><span class="table-dot orange-dot"></span>新台幣營運資金</span></td>
+                  <td class="masked-amount" data-amount="22,257,251.00">NT$ 22,257,251.00</td>
+                  <td class="masked-amount emphasis" data-amount="22,257,251.00">NT$ 22,257,251.00</td>
+                  <td class="masked-amount" data-amount="0.00">NT$ 0.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel-footnote">
+            <span>資料日期：<time id="dataDate">2026/06/23</time></span>
+            <span>金額單位：新台幣（NT$）</span>
+          </div>
+        </article>
+
+        <article class="panel cash-panel" id="forecast">
+          <div class="panel-head compact">
+            <div>
+              <p class="eyebrow">七日資金預估</p>
+              <h2>近期現金流</h2>
+            </div>
+            <button class="more-button" type="button" aria-label="更多選項">•••</button>
+          </div>
+          <div class="cash-value"><span>預估期末</span><strong class="masked-amount" data-amount="21,771,001.00">NT$ 21,771,001.00</strong></div>
+          <div class="chart-wrap" aria-label="七日資金預估圖表">
+            <svg class="cash-chart" viewBox="0 0 460 170" role="img" aria-label="資金預估折線圖">
+              <defs>
+                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F4A261" stop-opacity=".38" />
+                  <stop offset="100%" stop-color="#F4A261" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <line x1="10" y1="30" x2="450" y2="30" class="grid-line" />
+              <line x1="10" y1="80" x2="450" y2="80" class="grid-line" />
+              <line x1="10" y1="130" x2="450" y2="130" class="grid-line" />
+              <path d="M10,65 C45,52 68,57 92,49 S140,65 165,60 S206,31 235,43 S278,83 310,72 S350,51 375,67 S420,48 450,36 L450,150 L10,150 Z" fill="url(#areaGradient)" />
+              <path d="M10,65 C45,52 68,57 92,49 S140,65 165,60 S206,31 235,43 S278,83 310,72 S350,51 375,67 S420,48 450,36" class="chart-line" />
+              <circle cx="450" cy="36" r="5" class="chart-point" />
+            </svg>
+            <div class="chart-days"><span>今日</span><span>週二</span><span>週三</span><span>週四</span><span>週五</span><span>週六</span><span>週日</span></div>
+          </div>
+          <div class="cash-footer">
+            <span><i class="legend incoming"></i>預計入帳 NT$ 618,300</span>
+            <span><i class="legend outgoing"></i>預計支出 NT$ 1,104,550</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel activity-panel" id="transactions">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">最近更新</p>
+            <h2>資金動態</h2>
+          </div>
+          <a class="text-button" href="#transactions">查看收支明細 <span>→</span></a>
+        </div>
+        <div class="activity-list">
+          <div class="activity-row">
+            <span class="activity-icon incoming-icon">↓</span>
+            <div class="activity-info"><b>門市營收彙總入帳</b><span>6 家門市・2026/06/23</span></div>
+            <strong class="positive masked-amount" data-amount="+ 186,740.00">+ NT$ 186,740.00</strong>
+          </div>
+          <div class="activity-row">
+            <span class="activity-icon outgoing-icon">↑</span>
+            <div class="activity-info"><b>原物料採購款項</b><span>供應商付款・2026/06/23</span></div>
+            <strong class="negative masked-amount" data-amount="- 58,340.00">- NT$ 58,340.00</strong>
+          </div>
+          <div class="activity-row">
+            <span class="activity-icon neutral-icon">↺</span>
+            <div class="activity-info"><b>帳務資料同步完成</b><span>資料來源：內部財務表</span></div>
+            <strong class="neutral">已完成</strong>
+          </div>
+        </div>
+      </section>
+
+      <footer class="app-footer">© <span id="year">2026</span> 良呈橘時有限公司　｜　內部資金管理介面</footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
